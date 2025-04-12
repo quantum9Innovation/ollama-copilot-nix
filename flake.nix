@@ -11,19 +11,19 @@
       let
         pkgs = import nixpkgs { inherit system; };
 
+        srcInfo = builtins.fromJSON (builtins.readFile ./sourcing.json);
         ollama-copilot = pkgs.buildGoModule {
           pname = "ollama-copilot";
-          version = "unstable-2025-04-12";
+          version = "unstable-${builtins.substring 0 8 srcInfo.rev}";
 
           src = pkgs.fetchFromGitHub {
             owner = "bernardo-bruning";
             repo = "ollama-copilot";
-            rev = "d049c48e103f75a00c2bed66cedaee6e1dd89fb0";
-            sha256 = "sha256-mWbE5NwGHgbNDrZ/0BQn4tySRi5JU76iMTNKZAtMAxg=";
+            rev = srcInfo.rev;
+            sha256 = srcInfo.hash;
           };
 
           vendorHash = "sha256-g27MqS3qk67sve/jexd07zZVLR+aZOslXrXKjk9BWtk=";
-
           subPackages = [ "." ];
         };
       in {
