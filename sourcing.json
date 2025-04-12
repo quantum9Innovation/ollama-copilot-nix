@@ -1,6 +1,12 @@
 {
-  "owner": "bernardo-bruning",
-  "repo": "ollama-copilot",
-  "rev": "83ff4b66ad8bdcf6f7958a1027fa8cfa295ad514",
-  "hash": "sha256-/DNx/LJqZKIWbsLV+eVpeiHScTbiDHGhrulAp6cQmWg="
+  "url": "https://github.com/bernardo-bruning/ollama-copilot",
+  "rev": "d049c48e103f75a00c2bed66cedaee6e1dd89fb0",
+  "date": "2025-03-30T22:41:48-03:00",
+  "path": "/nix/store/lbil7c9vqlxalnc8k0lf2rgbfswl25h7-ollama-copilot",
+  "sha256": "06039h5n8jik66ibwls95r395p724wad0zxn1v6hc7h6vkjc8rlr",
+  "hash": "sha256-mWbE5NwGHgbNDrZ/0BQn4tySRi5JU76iMTNKZAtMAxg=",
+  "fetchLFS": false,
+  "fetchSubmodules": false,
+  "deepClone": false,
+  "leaveDotGit": false
 }
