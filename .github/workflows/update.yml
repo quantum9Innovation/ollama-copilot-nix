@@ -20,10 +20,9 @@ jobs:
 
       - name: Update sourcing information
         env:
-          OWNER: bernardo-bruning
-          REPO: ollama-copilot
+          URL: https://github.com/bernardo-bruning/ollama-copilot
         run: |
-          nix run nixpkgs#nix-prefetch-github -- --json $OWNER $REPO > sourcing_new.json
+          nix run nixpkgs#nix-prefetch-git -- --json --url $URL > sourcing_new.json
           mv sourcing_new.json sourcing.json
 
       - name: Update flake
